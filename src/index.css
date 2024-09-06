@@ -23,3 +23,48 @@ a {
   text-decoration: none;
   margin: 30px;
 }
+
+.section-1, .section-2, .section-3 {
+  height: 100vh; /* Full viewport height to ensure scrolling */
+  padding: 20px;
+  background: #B084D2;
+}
+
+.section-2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50%;
+  padding: 20px;
+}
+
+.img {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.section-2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50%; /* Adjust height based on your design */
+}
+
+
+.vertical-line {
+  position: absolute;
+  left: 50%; /* Centers the line horizontally in the section */
+  transform: translateX(-50%); /* Adjust to center it based on width */
+  width: 2px; /* Line thickness */
+  height: 100%; /* Span the entire height of the section */
+  background-color: black; /* Line color */
+}
