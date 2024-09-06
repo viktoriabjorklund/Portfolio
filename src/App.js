@@ -1,13 +1,17 @@
 import React from 'react';
-import CameraButton from './camerabutton'; // Adjust the path if needed
 
 const App = () => {
     return (
-        <div className="App">
-            <header className="App-header">
-                <CameraButton />
+            <header className="info-header">
+                <section id="start">
+                    <h1>
+                        <a href="">About</a>
+                        <a href="">Resume</a>
+                        <a href="">Projects</a>
+                        <a href="">Contact</a>
+                    </h1>
+                </section>
             </header>
-        </div>
     );
 };
 
