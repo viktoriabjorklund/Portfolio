@@ -43,6 +43,7 @@ const App = () => {
                     </h1>
                 </section>
             </header>
+            <section className="sect-1">
             <section
                 ref={section1Ref}
                 className={`section-1 ${isVisible ? "fade-in" : "fade-out"}`}
@@ -61,6 +62,7 @@ const App = () => {
                         </div>
                     </div>
                 </div>
+            </section>
             </section>
         </div>
     );
