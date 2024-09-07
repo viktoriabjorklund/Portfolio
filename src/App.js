@@ -8,15 +8,19 @@ const App = () => {
     useEffect(() => {
         const objOptions = {
             root: null,
-            threshold: 0.6, // Adjust threshold as needed
+            threshold: [0.3, 0.6],
             rootMargin: "0px",
         };
 
         const observerCallback = (entries) => {
             const [entry] = entries;
-            console.log("Entry:", entry);
-            console.log("Entry isIntersecting:", entry.isIntersecting);
-            setIsVisible(entry.isIntersecting);
+
+            if (entry.intersectionRatio >= 0.6) {
+                setIsVisible(true);
+            }
+            else if (entry.intersectionRatio < 0.3) {
+                setIsVisible(false);
+            }
         };
 
         const sectionObserver = new IntersectionObserver(observerCallback, objOptions);
@@ -51,8 +55,9 @@ const App = () => {
                 <div className="timeline">
                     <div className="container left">
                         <div className="content">
-                            <h2>2017</h2>
-                            <p>Lorem ipsum..</p>
+                            <h2>Royal Institute of Technology</h2>
+                            <h3>M.Sc Interactive Media Technology</h3>
+                            <p>2024 - 2026, Stockholm</p>
                         </div>
                     </div>
 

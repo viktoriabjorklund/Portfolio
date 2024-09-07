@@ -10,6 +10,7 @@ body {
   background: linear-gradient(#A6D3FC, #B084D2); /* Orange to Yellow gradient */
   display: flex;
   justify-content: center;
+  
 }
 
 .info-header {
@@ -17,6 +18,7 @@ body {
   margin-top: 3%;
   font-size: 15px;
   text-align: center;
+
 }
 
 a {
@@ -33,16 +35,18 @@ a {
 .section-1 {
   height: 50%; /* Adjust height based on your design */
   opacity: 0; /* Default state for fade-out */
-  transition: opacity 1s ease-in-out;
+  /*transition: opacity 2s ease-in-out; */
   background: #B084D2;
 }
 
 .fade-in {
   opacity: 1;
+  transition: opacity 1.5s ease-in;
 }
 
 .fade-out {
   opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
 
 * {
@@ -53,7 +57,7 @@ a {
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -140,6 +144,8 @@ a {
   background-color: white;
   position: relative;
   border-radius: 6px;
+  font-family: 'Archivo Black', sans-serif;
+
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
