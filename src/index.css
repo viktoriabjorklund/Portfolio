@@ -53,7 +53,7 @@ a {
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
-  max-width: 1200px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -64,14 +64,14 @@ a {
   width: 6px;
   background-color: white;
   top: 0;
-  bottom: 0;
+  bottom: 20%;
   left: 50%;
   margin-left: -3px;
 }
 
 /* Container around content */
 .container {
-  padding: 10px 40px;
+  padding: 30px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
@@ -106,12 +106,12 @@ a {
   content: " ";
   height: 0;
   position: absolute;
-  top: 22px;
+  top: 30.5px;
   width: 0;
   z-index: 1;
-  right: 30px;
+  right: 35px;
   border: medium solid white;
-  border-width: 10px 0 10px 10px;
+  border-width: 8px 0 8px 8px;
   border-color: transparent transparent transparent white;
 }
 
@@ -120,12 +120,12 @@ a {
   content: " ";
   height: 0;
   position: absolute;
-  top: 22px;
+  top: 30.5px;
   width: 0;
   z-index: 1;
-  left: 30px;
+  left: 35px;
   border: medium solid white;
-  border-width: 10px 10px 10px 0;
+  border-width: 8px 8px 8px 0;
   border-color: transparent white transparent transparent;
 }
 
@@ -136,7 +136,7 @@ a {
 
 /* The actual content */
 .content {
-  padding: 20px 30px;
+  padding: 40px 30px;
   background-color: white;
   position: relative;
   border-radius: 6px;

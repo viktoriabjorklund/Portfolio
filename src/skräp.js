@@ -1,30 +1,32 @@
+// https://www.w3schools.com/howto/howto_css_timeline.asp
 import React, { useEffect, useRef, useState } from 'react';
 
 const App = () => {
-    const section2Ref = useRef(null);
+    const section1Ref = useRef(null); // Ref for section-1
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const objOptions = {
             root: null,
-            threshold: 0.1,  // Adjust as needed for visibility threshold
-            rootMargin: "-200px",  // Adjust to ensure visibility is triggered as expected
+            threshold: 0.5, // Adjust threshold as needed
+            rootMargin: "0px",
         };
 
         const observerCallback = (entries) => {
             const [entry] = entries;
-            console.log("Image is visible:", entry.isIntersecting); // Debugging visibility
+            console.log("Entry:", entry);
+            console.log("Entry isIntersecting:", entry.isIntersecting);
             setIsVisible(entry.isIntersecting);
         };
 
         const sectionObserver = new IntersectionObserver(observerCallback, objOptions);
-        if (section2Ref.current) {
-            sectionObserver.observe(section2Ref.current);
+        if (section1Ref.current) {
+            sectionObserver.observe(section1Ref.current);
         }
 
         return () => {
-            if (section2Ref.current) {
-                sectionObserver.unobserve(section2Ref.current);
+            if (section1Ref.current) {
+                sectionObserver.unobserve(section1Ref.current);
             }
         };
     }, []);
@@ -41,24 +43,30 @@ const App = () => {
                     </h1>
                 </section>
             </header>
-
-            <section ref={section2Ref} className="section-2">
-                <img
-                    className={`img ${isVisible ? "fade-in" : "fade-out"}`}
-                    src="logo192.png"
-                    alt="Reveal on scroll"
-                />
-                <div 
-                class="vertical-line"
-                ></div>
-
+            <section className="sect-1">
+            <section
+                ref={section1Ref}
+                className={`section-1 ${isVisible ? "fade-in" : "fade-out"}`}
+            >
+                <div className="timeline">
+                    <div className="container left">
+                        <div className="content">
+                            <h2>2017</h2>
+                            <p>Lorem ipsum..</p>
+                        </div>
+                    </div>
+                    <div className="container right">
+                        <div className="content">
+                            <h2>2016</h2>
+                            <p>Lorem ipsum..</p>
+                        </div>
+                    </div>
+                </div>
             </section>
-
-            <section className="section-3">
-                <h2>Section 3</h2>
             </section>
         </div>
     );
 };
 
 export default App;
+

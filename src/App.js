@@ -8,7 +8,7 @@ const App = () => {
     useEffect(() => {
         const objOptions = {
             root: null,
-            threshold: 0.5, // Adjust threshold as needed
+            threshold: 0.6, // Adjust threshold as needed
             rootMargin: "0px",
         };
 
@@ -55,12 +55,31 @@ const App = () => {
                             <p>Lorem ipsum..</p>
                         </div>
                     </div>
+
+                    <div className='timeline'/>
+            <section
+                ref={section1Ref}
+                className={`section-1 ${isVisible ? "fade-in" : "fade-out"}`}
+            >
                     <div className="container right">
                         <div className="content">
                             <h2>2016</h2>
                             <p>Lorem ipsum..</p>
                         </div>
                     </div>
+            </section>
+            <section
+                ref={section1Ref}
+                className={`section-1 ${isVisible ? "fade-in" : "fade-out"}`}
+            >
+                    <div className="container left">
+                        <div className="content">
+                            <h2>2015</h2>
+                            <p>Lorem ipsum..</p>
+                        </div>
+                    </div>
+            </section>
+
                 </div>
             </section>
             </section>
