@@ -1,4 +1,5 @@
 // https://www.w3schools.com/howto/howto_css_timeline.asp
+// https://tailwindcss.com/
 import React, { useEffect, useRef, useState } from 'react';
 
 const App = () => {
@@ -8,15 +9,20 @@ const App = () => {
     useEffect(() => {
         const objOptions = {
             root: null,
-            threshold: 0.5, // Adjust threshold as needed
+            threshold: [0.3, 0.6],
             rootMargin: "0px",
         };
+        
 
         const observerCallback = (entries) => {
             const [entry] = entries;
-            console.log("Entry:", entry);
-            console.log("Entry isIntersecting:", entry.isIntersecting);
-            setIsVisible(entry.isIntersecting);
+
+            if (entry.intersectionRatio >= 0.6) {
+                setIsVisible(true);
+            }
+            else if (entry.intersectionRatio < 0.3) {
+                setIsVisible(false);
+            }
         };
 
         const sectionObserver = new IntersectionObserver(observerCallback, objOptions);
@@ -43,26 +49,109 @@ const App = () => {
                     </h1>
                 </section>
             </header>
-            <section className="sect-1">
-            <section
-                ref={section1Ref}
-                className={`section-1 ${isVisible ? "fade-in" : "fade-out"}`}
-            >
-                <div className="timeline">
-                    <div className="container left">
-                        <div className="content">
-                            <h2>2017</h2>
-                            <p>Lorem ipsum..</p>
-                        </div>
+    
+            <body class="antialiased text-gray-800">
+                <div class="relative container mx-auto px-6 flex flex-col py-12 space-y-24">
+                    <div class="absolute z-0 w-1 h-full bg-white shadow-md top-12 left-9 md:mx-auto md:right-0 md:left-0">
                     </div>
-                    <div className="container right">
-                        <div className="content">
-                            <h2>2016</h2>
-                            <p>Lorem ipsum..</p>
+                    <div class="relative z-10">
+                        <img
+                        src= "https://cdn.vectorstock.com/i/500p/55/77/mortar-board-or-graduation-cap-education-symbol-vector-20075577.jpg"
+                        alt=""
+                        class = "timeline-img"
+                        />
+                        
+                    <div class='flex space x-8'>
+                    <div class="timeline-container">
+                    <div 
+                        class="timeline-pointer"
+                        aria-hidden="true"
+                    ></div>
+                    
+                    <div class="bg-white p-6 rounded-md shadow-md flex justify-between items-center">
+                        <div>
+                            <span class="font-bold text-kth-blue">KTH - Royal Institute of Technology</span>
+                            <h1 class="text-gray-700">M.Sc Interactive Media Technology</h1>
+                            <h1 class="text-gray-700">Within Master of Science in Engineering</h1>
+                        </div>
+                        <div class="flex flex-col justify-between text-right">
+                            <div class="text-gray-500 text-sm">
+                                <span>2024 - 2026</span>
+                            </div>
+                            <div class="text-gray-500 text-sm mt-auto">
+                                <p>Stockholm, Sweden</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+                
+                </div>
+                </div>
+                <div class="relative z-10">
+                        <img
+                        src= "https://cdn.vectorstock.com/i/500p/55/77/mortar-board-or-graduation-cap-education-symbol-vector-20075577.jpg"
+                        alt=""
+                        class = "timeline-img"
+                        />
+                    <div class="timeline-container timeline-container-left">
+                    <div 
+                        class="timeline-pointer timeline-pointer-left"
+                        aria-hidden="true"
+                    ></div>
+                    <div class="bg-white p-6 rounded-md shadow-md flex justify-between items-center">
+                        <div>
+                            <span class="font-bold text-trinity-blue">Trinity College </span>
+                            <h1 class="text-gray-700">Post-graduate, Computer Science</h1>
+                        </div>
+                        <div class="flex flex-col justify-between text-right">
+                            <div class="text-gray-500 text-sm">
+                                <span>2025 - 2025</span>
+                            </div>
+                            <div class="text-gray-500 text-sm mt-auto">
+                                <p>Dublin, Ireland</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="relative z-10">
+                        <img
+                        src= "https://cdn.vectorstock.com/i/500p/55/77/mortar-board-or-graduation-cap-education-symbol-vector-20075577.jpg"
+                        alt=""
+                        class = "timeline-img"
+                        />
+                    <div class="timeline-container">
+                    <div 
+                        class="timeline-pointer"
+                        aria-hidden="true"
+                    ></div>
+                    <div class="bg-white p-6 rounded-md shadow-md flex justify-between items-start">
+                        <div>
+                            <span class="font-bold text-kth-blue">KTH - Royal Institute of Technology</span>
+                            <h1 class="text-gray-700">B.Sc Media Technology</h1>
+                            <h1 class="text-gray-700">Within Master of Science in Engineering</h1>
+                        </div>
+
+                        <div class="flex flex-col justify-end text-right">
+                            <div class="text-gray-500 text-sm">
+                                <span>2021 - 2024</span>
+                            </div>
+                            <div class="text-gray-500 text-sm mt-auto">
+                                <p>Stockholm, Sweden</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+                <div class='flex justify-center space-x-8'>
+                    <div>hej</div>
+                    <div>då</div>
+                </div>
+                
+                </div>
+            </body>
+            <section className='sect-1'>
             </section>
         </div>
     );
