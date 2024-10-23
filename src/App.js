@@ -2,40 +2,8 @@
 // https://tailwindcss.com/
 import React, { useEffect, useRef, useState } from 'react';
 
+
 const App = () => {
-    const section1Ref = useRef(null); // Ref for section-1
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const objOptions = {
-            root: null,
-            threshold: [0.3, 0.6],
-            rootMargin: "0px",
-        };
-        
-
-        const observerCallback = (entries) => {
-            const [entry] = entries;
-
-            if (entry.intersectionRatio >= 0.6) {
-                setIsVisible(true);
-            }
-            else if (entry.intersectionRatio < 0.3) {
-                setIsVisible(false);
-            }
-        };
-
-        const sectionObserver = new IntersectionObserver(observerCallback, objOptions);
-        if (section1Ref.current) {
-            sectionObserver.observe(section1Ref.current);
-        }
-
-        return () => {
-            if (section1Ref.current) {
-                sectionObserver.unobserve(section1Ref.current);
-            }
-        };
-    }, []);
     
 
     return (
@@ -51,11 +19,10 @@ const App = () => {
                         
                 </svg>
                 
-        <div class="chonburi-regular text-[#fffbf0] absolute top-0 left-0 flex-row items-center mt-3 xs: space-x-6 md:space-x-14 w-full hidden xs:block">
+        <div class="chonburi-regular text-[#F1F1F1] absolute top-0 left-0 flex-row items-center mt-3 xs: space-x-6 md:space-x-14 w-full hidden xs:block">
             <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl ml-10" >Home</span>
-            <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl" >Education</span>
-            <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl" >CV</span>
             <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl" >Projects</span>
+            <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl" >CV</span>
             <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl" >Contact</span>
         </div>
 
@@ -65,7 +32,7 @@ const App = () => {
             <div></div>
 
             <div class='flex w-full'>
-                <div class='chonburi-regular text-[#DD5341] lg:text-xl xl:text-2xl xl:ml-20 2xl:ml-24 w-1/3'>
+                <div class='chonburi-regular text-[#DD5341] lg:text-xl xl:text-2xl xl:ml-20 2xl:ml-24 w-1/3 pb-48'>
                     I am a student osv här kan jag skriva nåt bra som ger mig ett jävla jobb kanske
                     <div class='mt-8 flex flex-row space-x-4'>
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24 ">
@@ -77,176 +44,46 @@ const App = () => {
             </div>
                 </div>
 
-            <div class='flex justify-end ml-auto mr-4'>
-            <svg width="200" height="600" viewBox="0 0 994 1422" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="142" height="142" fill="#889C7C"/>
-<rect x="710" y="1278" width="142" height="142" fill="#889C7C"/>
-<rect x="426" y="1278" width="142" height="142" fill="#889C7C"/>
-<rect x="142" y="1280" width="142" height="142" fill="#889C7C"/>
-<rect x="852" y="1136" width="142" height="142" fill="#889C7C"/>
-<rect x="568" y="1138" width="142" height="142" fill="#889C7C"/>
-<rect x="284" y="1136" width="142" height="142" fill="#889C7C"/>
-<rect y="1136" width="142" height="142" fill="#889C7C"/>
-<rect x="710" y="994" width="142" height="142" fill="#889C7C"/>
-<rect x="426" y="994" width="142" height="142" fill="#889C7C"/>
-<rect x="142" y="994" width="142" height="142" fill="#889C7C"/>
-<rect x="852" y="852" width="142" height="142" fill="#889C7C"/>
-<rect x="568" y="852" width="142" height="142" fill="#889C7C"/>
-<rect x="284" y="852" width="142" height="142" fill="#889C7C"/>
-<rect y="852" width="142" height="142" fill="#889C7C"/>
-<rect x="710" y="710" width="142" height="142" fill="#889C7C"/>
-<rect x="426" y="710" width="142" height="142" fill="#889C7C"/>
-<rect x="142" y="710" width="142" height="142" fill="#889C7C"/>
-<rect x="852" y="568" width="142" height="142" fill="#889C7C"/>
-<rect x="568" y="568" width="142" height="142" fill="#889C7C"/>
-<rect x="284" y="568" width="142" height="142" fill="#889C7C"/>
-<rect y="568" width="142" height="142" fill="#889C7C"/>
-<rect x="710" y="426" width="142" height="142" fill="#889C7C"/>
-<rect x="426" y="426" width="142" height="142" fill="#889C7C"/>
-<rect x="142" y="426" width="142" height="142" fill="#889C7C"/>
-<rect x="852" y="284" width="142" height="142" fill="#889C7C"/>
-<rect x="852" width="142" height="142" fill="#889C7C"/>
-<rect x="710" y="142" width="142" height="142" fill="#889C7C"/>
-<rect x="568" y="284" width="142" height="142" fill="#889C7C"/>
-<rect x="568" width="142" height="142" fill="#889C7C"/>
-<rect x="284" y="284" width="142" height="142" fill="#889C7C"/>
-<rect y="284" width="142" height="142" fill="#889C7C"/>
-<rect x="426" y="142" width="142" height="142" fill="#889C7C"/>
-<rect x="284" width="142" height="142" fill="#889C7C"/>
-<rect x="142" y="142" width="142" height="142" fill="#889C7C"/>
-</svg>
-</div>
             </div>
 
 
                 </div>
     
-            <div class="antialiased text-gray-800 pt-60">
-                <div class='text-5xl font-Ubuntu font-bold md:mx-auto text-center text-gray-600'> 
-                    <h1>Education</h1>
-                    </div>
-                <div class="relative container mx-auto px-6 flex flex-col py-12 space-y-24">
-                <div class="absolute z-0 w-1 h-full top-12 left-9 md:mx-auto md:right-0 md:left-0 bg-gradient-to-b from-[#fffbf0] from-1% via-white via-50% to-[#fffbf0] to-99%">
-                </div>
-                    <div class="relative z-10">
-                        <div class='timeline-img'></div>
-                    <div class='font-Ubuntu year-left hidden md:block'>
-                        2024 - 2026
-                    </div>
+           
+            <div class="sect-1">
+                <div class="lg:text-5xl lg:pt-36 lg:pb-32 2xl:pt-48 2xl:pb-28 text-[#8DA9B2] chonburi-regular 2xl:text-6xl text-center"> Projects </div>
+                <div class="relative">
+                <svg width="100%" height="100%" viewBox="0 0 616 443" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M616 175.557V84.7486C616 84.7486 600.31 99.0457 535.347 121.194C439.706 153.813 347.434 148.98 246.62 131.262C147.25 113.744 74.5876 132.268 1.27227e-05 163.176V175.559L616 175.557Z" fill="#5C91A3" fill-opacity="0.15"/>
+                    <path d="M0 283.336V443C0 443 15.6899 417.862 80.6533 378.92C176.294 321.568 268.566 330.065 369.38 361.219C468.75 392.019 541.412 359.449 616 305.106V283.334L0 283.336Z" fill="#5C91A3" fill-opacity="0.15"/>
+                    <rect y="175.559" width="616" height="107.775" fill="#5C91A3" fill-opacity="0.15"/>
+                </svg>
 
-                    <div id='section1Ref' class="timeline-container">
-                    <div 
-                        class="timeline-pointer"
-                        aria-hidden="true"
-                    ></div>
-                    
-                    <div class="bg-white pl-6 pr-6 pb-2 pt-6 rounded-md shadow-md flex justify-between items-start">
-                        <div class='flex-grow'>
-                                
-                            <hr class="justify-end w-1/2 my-2 border-t border-gray-300" />
-                            <span class="font-Ubuntu font-bold text-[#5C91A3] text-2xl">KTH - Royal Institute of Technology</span>
-                            <h1 class="font-Ubuntu text-gray-700 text-xl">M.Sc Interactive Media Technology</h1>
-                            <h1 class="font-Ubuntu text-gray-700 text-xl">Within Master of Science in Engineering</h1>
-                            <hr class="mt-6 justify-end w-1/2 my-2 border-t border-gray-300 ml-auto" />
-                            <div class='text-base mt-auto font-Ubuntu text-right'>
-                                <span> Stockholm, Sweden</span>
-                                </div>
-
-                        </div>
-
-                        <div class="flex flex-items-center text-right h-full">
-                            <div class="text-gray-500 text-sm">
-                                <div class='font-Ubuntu text-l text-gray-500 text-sm block md:hidden'>
-                                <span>2024 - 2026</span>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
+                <div></div>
                 
-                </div>
-                <div class="relative z-10">
-                        <img
-                        src= "https://cdn.vectorstock.com/i/500p/55/77/mortar-board-or-graduation-cap-education-symbol-vector-20075577.jpg"
-                        alt=""
-                        class = "timeline-img"
-                        />
-                    <div class='font-Ubuntu year-right hidden md:block'>
-                        2025 - 2025
-                    </div>
-                    <div class="timeline-container timeline-container-left">
-                    <div 
-                        class="timeline-pointer timeline-pointer-left"
-                        aria-hidden="true"
-                    ></div>
-                    <div class="bg-white p-6 rounded-md shadow-md flex justify-between items-start">
-                        <div>
-                            <span class="font-Ubuntu font-bold text-kth-blue">Trinity College Dublin</span>
-                            <h1 class="font-Ubuntu text-gray-700">Exchange semester</h1>
-                            <h1 class="font-Ubuntu text-gray-700">Faculty of Computer Science</h1>
-                        </div>
 
-                        <div class="flex justify-between text-right h-full">
-                            <div class="text-gray-500 text-sm">
-                                <div class='font-Ubuntu text-gray-500 text-sm block md:hidden'>
-                                <span>2025 - 2025</span>
-                                </div>
-                                <div class='font-Ubuntu mt-auto'>
-                                <span>Dublin, Ireland</span>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="relative z-10">
-                        <img
-                        src= "https://cdn.vectorstock.com/i/500p/55/77/mortar-board-or-graduation-cap-education-symbol-vector-20075577.jpg"
-                        alt=""
-                        class = "timeline-img"
-                        />
-                        <div class='font-Ubuntu year-left hidden md:block'>
-                            2021 - 2024
-                        </div>
-                    <div class="timeline-container">
-                    <div 
-                        class="timeline-pointer"
-                        aria-hidden="true"
-                    ></div>
-                    <div class="bg-white p-6 rounded-md shadow-md flex justify-between items-start">
-                        <div>
-                            <span class="font-Ubuntu font-bold text-kth-blue">KTH - Royal Institute of Technology</span>
-                            <h1 class="font-Ubuntu text-gray-700">B.Sc Media Technology</h1>
-                            <h1 class="font-Ubuntu text-gray-700">Within Master of Science in Engineering</h1>
-                        </div>
+                <div class="absolute lg:-top-24 lg:mt-0 lg:m-64 lg:space-x-28 2xl:-top-10 2xl:m-96 2xl:mt-0 flex items-center 2xl:space-x-40">
+            <img src="/plantisar.png" class="lg:w-96 2xl:w-full"/>
 
-                        <div class="flex justify-between text-right h-full">
-                            <div class="text-gray-500 text-sm">
-                                <div class='font-Ubuntu text-gray-500 text-sm block md:hidden'>
-                                <span>2021 - 2024</span>
-                                </div>
-                                <div class='font-Ubuntu mt-auto'>
-                                <span> Stockholm, Sweden</span>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-
-                </div>
-                </div>
-                
-                </div>
+            <div class="flex flex-col lg:mt-28 2xl:mt-0">
+            <div class="text-3xl chonburi-regular text-gray-900">
+                Plant care app
             </div>
-            <section className='sect-1'>
-                <div class='chonburi-regular text-xl'>
-                    EDUCATION
-                    Education
-                </div>
-                
-            </section>
+            <div class="lg:text-l lg:mt-4 chonburi-regular text-gray-900 2xl:text-2xl 2xl:mt-4">
+                This project was about building a app osv lorem ipsum också skriver man lite mer
+                som man behagar. Jadda jadda boom oki yes kom igen vad har jag lärt mig hmm 
+                jo men tänk på lite saker osv
+            </div>
+            <div class="mt-4">
+                <button class="bg-[#DD5341] text-[#F1F1F1] chonburi-regular py-2 px-4 rounded-lg">
+                    Read More
+                </button>
+            </div>
+        </div>
+        </div>
+            </div>
+
+            </div> 
         </div>
     );
 };
