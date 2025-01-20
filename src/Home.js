@@ -10,21 +10,15 @@ const Home = () => {
     return (
         <div>
                 <div id="start"> 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#5C91A3">
-                    <path d="M0 0v99.7C62 69 122.4 48.7 205 66c83.8 17.6 160.5 20.4 240-12 54-22 110-26 173-10a392.2 392.2 0 0 0 222-5c55-17 110.3-36.9 160-27.2V0H0Z" opacity=".3">
-                    </path>
-                        <path d="M0 0v74.7C62 44 122.4 28.7 205 46c83.8 17.6 160.5 25.4 240-7 54-22 110-21 173-5 76.5 19.4 146.5 23.3 222 0 55-17 110.3-31.9 160-22.2V0H0Z" opacity=".6">
-
-                        </path>
-            
-                </svg>
                 
-        <div class="bg-[#5C91A3] chonburi-regular text-red absolute top-0 left-0 flex-row items-center mt-3 xs: space-x-6 md:space-x-14 w-full hidden xs:block">
-            <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl ml-10" >Home</span>
-            <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl" >Projects</span>
-            <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl" >CV</span>
-            <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl" >Contact</span>
-        </div>
+                <div class="chonburi-regular text-[#8DA9B2] text-right absolute top-0 right-0 mr-8 flex items-center mt-3 xs:space-x-6 md:space-x-14 w-full xs:block justify-end">
+                    <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl ml-10">Home</span>
+                    <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl">Projects</span>
+                    <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl">CV</span>
+                    <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl">Contact</span>
+                </div>
+
+
 
         <div class='chonburi-regular-shadow text-[#DD5341] xl:w-1/3 xl:text-5xl 2xl:text-7xl text-left xl:ml-20 2xl:ml-24 xl: mt-26 2xl:mt-32'>
                 HELLO, I AM VIKTORIA BJÖRKLUND!
@@ -32,7 +26,7 @@ const Home = () => {
             <div></div>
 
             <div class='flex w-full'>
-                <div class='chonburi-regular text-[#DD5341] lg:text-xl xl:text-2xl xl:ml-20 2xl:ml-24 w-1/3 pb-48'>
+                <div class='chonburi-regular text-justify text-[#DD5341] lg:text-xl xl:text-2xl xl:ml-20 2xl:ml-24 w-1/3 pb-48'>
                     I am a student osv här kan jag skriva nåt bra som ger mig ett jävla jobb kanske
                     <div class='mt-8 flex flex-row space-x-4'>
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24 ">
@@ -58,8 +52,6 @@ const Home = () => {
                     <path d="M0 283.336V443C0 443 15.6899 417.862 80.6533 378.92C176.294 321.568 268.566 330.065 369.38 361.219C468.75 392.019 541.412 359.449 616 305.106V283.334L0 283.336Z" fill="#5C91A3" fill-opacity="0.15"/>
                     <rect y="175.559" width="616" height="107.775" fill="#5C91A3" fill-opacity="0.15"/>
                 </svg>
-
-                <div></div>
                 
 
                 <div class="absolute lg:-top-24 lg:mt-0 lg:m-64 lg:space-x-28 2xl:-top-10 2xl:m-96 2xl:mt-0 flex items-center 2xl:space-x-40">
