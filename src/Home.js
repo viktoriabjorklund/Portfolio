@@ -39,47 +39,64 @@ const Home = () => {
                 </div>
 
             </div>
-
-
                 </div>
     
-           
             <div class="sect-1">
-                <div class="lg:text-5xl lg:pt-36 lg:pb-32 2xl:pt-48 2xl:pb-28 text-[#8DA9B2] chonburi-regular 2xl:text-6xl text-center"> Projects </div>
-                <div class="relative">
-                <svg width="100%" height="100%" viewBox="0 0 616 443" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M616 175.557V84.7486C616 84.7486 600.31 99.0457 535.347 121.194C439.706 153.813 347.434 148.98 246.62 131.262C147.25 113.744 74.5876 132.268 1.27227e-05 163.176V175.559L616 175.557Z" fill="#5C91A3" fill-opacity="0.15"/>
-                    <path d="M0 283.336V443C0 443 15.6899 417.862 80.6533 378.92C176.294 321.568 268.566 330.065 369.38 361.219C468.75 392.019 541.412 359.449 616 305.106V283.334L0 283.336Z" fill="#5C91A3" fill-opacity="0.15"/>
-                    <rect y="175.559" width="616" height="107.775" fill="#5C91A3" fill-opacity="0.15"/>
-                </svg>
+                <div class="lg:text-5xl lg:pt-36 lg:pb-32 2xl:pt-48 2xl:pb-28 text-[#8DA9B2] chonburi-regular 2xl:text-6xl text-center"> 
+                    Projects 
+                    </div>
+ 
                 
+                    <div class="flex flex-col items-center mt-6">
+                        <div class="flex-row-reverse flex items-center space-x-10 mb-28">
+                            <img src="/furhat.png" class="w-96 mt-6"/>
 
-                <div class="absolute lg:-top-24 lg:mt-0 lg:m-64 lg:space-x-28 2xl:-top-10 2xl:m-96 2xl:mt-0 flex items-center 2xl:space-x-40">
-            <img src="/plantisarmockup.png" class="lg:w-96 2xl:w-full"/>
+                            <div class="flex flex-col max-w-md">
+                                <div class="text-2xl chonburi-regular text-[#444444]">
+                                    Pitch Imperfect
+                                </div>
+                                <div class="text-lg mt-4 chonburi-regular text-[#444444]">
+                                    Through various interaction design methodologies, I worked on a project that culminated in a 
+                                    Figma-based prototype, applying user-centered design principles, usability testing, and modern 
+                                    prototyping techniques.
+                                </div>
+                                <div class="mt-4 self-start">
+                                <Link to="/pitch-imperfect-details">
+                                    <button class="bg-[#DD5341] text-[#F1F1F1] chonburi-regular py-2 px-4 rounded-lg inline-block">
+                                        Read More
+                                    </button>
+                                </Link>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="flex-row flex items-center space-x-10 mb-28">
+                            <img src="/plantisarmockup.png" class="w-96 mt-6"/>
 
-            <div class="flex flex-col lg:mt-20 2xl:mt-0">
-            <div class="text-3xl chonburi-regular text-[#444444]">
-                Plant care app
-            </div>
-            <div class="lg:text-l lg:mt-4 chonburi-regular text-[#444444] 2xl:text-2xl 2xl:mt-4">
-            Through various interaction design methodologies, 
-            I worked on a project that culminated in a Figma-based prototype, 
-            applying user-centered design principles, usability testing, and modern prototyping techniques.
-            </div>
-            <div class="mt-4">
-            <Link to="/plant-details">
-                <button class="bg-[#DD5341] text-[#F1F1F1] chonburi-regular py-2 px-4 rounded-lg" 
-                >
-                    Read More
-                </button>
-                </Link>
-            </div>
-        </div>
-        </div>
+                            <div class="flex flex-col max-w-md">
+                                <div class="text-2xl chonburi-regular text-[#444444]">
+                                    Plant care app
+                                </div>
+                                <div class="text-lg mt-4 chonburi-regular text-[#444444]">
+                                    Through various interaction design methodologies, I worked on a project that culminated in a 
+                                    Figma-based prototype, applying user-centered design principles, usability testing, and modern 
+                                    prototyping techniques.
+                                </div>
+                                <div class="mt-4 self-start">
+                                <Link to="/plant-details">
+                                    <button class="bg-[#DD5341] text-[#F1F1F1] chonburi-regular py-2 px-4 rounded-lg inline-block">
+                                        Read More
+                                    </button>
+                                </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
             </div>
 
             </div> 
-        </div>
     );
 };
 

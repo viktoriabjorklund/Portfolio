@@ -7,6 +7,7 @@ import App_test from './skräp';
 import reportWebVitals from './reportWebVitals';
 import Layout from './Layout';
 import PlantDetails from './PlantDetails';
+import FurhatDetails from './FurhatDetails';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="plant-details" element={<PlantDetails />} />
+          <Route path="pitch-imperfect-details" element={<FurhatDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>

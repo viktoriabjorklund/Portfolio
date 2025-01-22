@@ -11,6 +11,9 @@ const Layout = () => {
           <li>
             <Link to="/plant-detils"></Link>
           </li>
+          <li>
+            <Link to="/pitch-imperfect-detils"></Link>
+          </li>
         </ul>
       </nav>
 

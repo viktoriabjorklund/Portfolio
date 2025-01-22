@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const PlantDetails = () => {
+const FurhatDetails = () => {
     return (
         <div>
             <div class="chonburi-regular text-[#8DA9B2] text-right absolute top-0 right-0 mr-8 flex items-center mt-3 xs:space-x-6 md:space-x-14 w-full xs:block justify-end">
@@ -20,18 +20,26 @@ const PlantDetails = () => {
 
             <div class="relative flex items-center w-full">
 
-                <div class="absolute top-0 left-24">
-                    <img src="rename_plant.png" class="w-[130px] relative z-10" />
+            <div class="relative flex justify-end w-full mt-0 mr-28">
+                <div class="flex flex-col items-center mt-16">
+                    <img src="furhat.png" class="w-[400px] relative z-10" />
+
+                    <div class="mt-10">
+                    <iframe 
+                        width="320" 
+                        height="180" 
+                        src="https://www.youtube.com/embed/yD6-LCzyFVA" 
+                        title="YouTube video player" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowFullScreen
+                    ></iframe>
+                    </div>
                 </div>
-                <div class="ml-64 mt-48">
-                    <img src="reviews_plant.png" class="w-[130px] relative z-10" />
-                </div>
-                <div class="absolute top-80 left-24">
-                    <img src="details_plant.png" class="w-[130px] relative z-10" />
-                </div>
-                <div className="text-[#444444] chonburi-regular absolute left-[700px] top-1/4 transform -translate-x-1/2 w-[500px]">
+            </div>
+
+                <div className="text-[#444444] chonburi-regular absolute left-[400px] mt-0 transform -translate-x-1/2 w-[500px]">
                     <span className="text-3xl block text-center">
-                        Plant care app
+                        Pitch Imperfect
                     </span>
 
                     <div className="flex flex-col space-y-10 mt-10 ">
@@ -43,24 +51,25 @@ const PlantDetails = () => {
                             inte ha ett sånt jobb.
                         </span>
 
-                        <span className="text-2xl">
+                        <span className="text-xl">
                             Keywords
                         </span>
-                        <div className="flex flex-wrap gap-x-4 gap-y-4 w-full">
-                            {["UX Research", "UX design", "Figma", "Double Diamond"].map((skill) => (
-                                <button key={skill} className="bg-[#8DA9B2] text-white px-4 py-2 rounded-md w-auto min-w-fit text-center">
+                        <div className="flex flex-wrap gap-x-3 gap-y-4 w-full">
+                            {["Kotlin", "Furhat Robotics", "Multimodalities", "Teamwork"].map((skill) => (
+                                <button key={skill} className="bg-[#8DA9B2] text-white px-2 py-1 rounded-md w-auto min-w-fit text-center">
                                     {skill}
                                 </button>
                             ))}
                         </div>
+
+                        
                     </div>
                 </div>
 
             </div>
+            </div>
 
-
-        </div>
     );
 };
 
-export default PlantDetails;
+export default FurhatDetails;
