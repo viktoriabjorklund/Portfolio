@@ -1,15 +1,41 @@
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const PlantDetails = () => {
+    const navigate = useNavigate();
     return (
         <div>
-            <div class="chonburi-regular text-[#8DA9B2] text-right absolute top-0 right-0 mr-8 flex items-center mt-3 xs:space-x-6 md:space-x-14 w-full xs:block justify-end">
-                    <Link to="/">
-                        <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl ml-10">Home</span>
-                    </Link>
-                    <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl">Projects</span>
-                    <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl">CV</span>
-                    <span class="text-lg sm:text-xl md:text-2xl lg:text-2xl">Contact</span>
+            <div className="bg-[#F1F1F1] fixed top-0 left-0 w-full">
+            <div className="chonburi-regular text-[#8DA9B2] flex justify-between items-center py-4 px-8">
+                <div
+                    className="text-lg sm:text-xl md:text-2xl lg:text-2xl ml-1 cursor-pointer"
+                    onClick={() => navigate('/')}
+                >
+                    Viktoria Björklund
+                </div>
+
+                <div className="chonburi-regular text-[#8DA9B2] flex space-x-10 mr-4">
+                    <div
+                        className="text-lg sm:text-xl md:text-2xl lg:text-2xl cursor-pointer"
+                        onClick={() => navigate('/plant-details')}
+                    >
+                        Projects
+                    </div>
+                    <div
+                        className="text-lg sm:text-xl md:text-2xl lg:text-2xl cursor-pointer"
+                        onClick={() => navigate('/cv')}
+                    >
+                        CV
+                    </div>
+                    <div
+                        className="text-lg sm:text-xl md:text-2xl lg:text-2xl cursor-pointer"
+                        onClick={() => navigate('/contact')}
+                    >
+                        Contact
+                    </div>
+                </div>
+            </div>
             </div>
 
             <div class="absolute bottom-0 left-0 w-full -z-10">
@@ -48,9 +74,9 @@ const PlantDetails = () => {
                         </span>
                         <div className="flex flex-wrap gap-x-4 gap-y-4 w-full">
                             {["UX Research", "UX design", "Figma", "Double Diamond"].map((skill) => (
-                                <button key={skill} className="bg-[#8DA9B2] text-white px-4 py-2 rounded-md w-auto min-w-fit text-center">
+                                <div key={skill} className="bg-[#8DA9B2] text-white px-4 py-2 rounded-md w-auto min-w-fit text-center">
                                     {skill}
-                                </button>
+                                </div>
                             ))}
                         </div>
                     </div>

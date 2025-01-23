@@ -9,6 +9,7 @@ import Layout from './Layout';
 import PlantDetails from './PlantDetails';
 import FurhatDetails from './FurhatDetails';
 
+
 export default function App() {
   return (
     <BrowserRouter>
