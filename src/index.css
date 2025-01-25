@@ -2,37 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .timeline-img {
-    @apply bg-white h-8 w-8 object-cover rounded-full shadow-md xs:absolute md:mx-auto md:right-0 md:left-0;
-    top: 40%;
-  }
-  .timeline-container {
-    @apply relative pt-2 xs:pl-26 xs:pt-0 md:w-1/2 md:ml-auto md:pl-16;
-    
-  }
-  .timeline-container-left {
-    @apply relative pt-2 xs:pl-26 xs:pt-0 md:w-1/2 md:ml-0 md:mr-auto md:pl-0 md:pr-16;
-  }
-  .year-left {
-    @apply text-gray-500 w-60 text-left object-cover xs:absolute md:mx-auto md:right-0 md:left-0;
-    top: 40%;
-  }
 
-  .year-right {
-    @apply text-gray-500 w-60 text-right object-cover xs:absolute md:mx-auto md:right-0 md:left-0;
-    top: 40%;
-  }
-  
-  .timeline-pointer {
-    @apply absolute inset-0 left-9 h-4 w-4 transform rotate-45 bg-white xs:left-24 md:left-14 hidden xs:block;
-    top: 45%;
-  }
-  .timeline-pointer-left {
-    @apply md:left-auto md:right-14;
-  }
-
-}
 
 body {
   margin: 0;
@@ -49,6 +19,9 @@ body {
   
 }
 
+.ml-4 li {
+  margin-bottom: 10px; /* Adds space between bullet points */
+}
 
 a {
   color: inherit;
@@ -72,25 +45,6 @@ a {
   /*background: #B084D2; */
 }
 
-.fade-in {
-  opacity: 1;
-  transition: opacity 1.5s ease-in;
-}
-
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-}
-
-
-.righteous-regular {
-  font-family: "Righteous", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 48px; /* Adjust the size as needed */
-  color: #FBB245; /* Main text color */
-
-}
 
 .chonburi-regular {
   font-family: "Chonburi", serif;
@@ -98,16 +52,27 @@ a {
   font-style: normal;
 }
 
-.chonburi-regular-shadow {
-  font-family: "Chonburi", serif;
+
+.quicksand-regular {
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  color: #DD5341;
-  text-shadow: 
-  2px 2px 0 #D7A278,  /* Secondary shadow for depth */
-  24px 24px 0  #FACA78,
 }
 
+.quicksand-semi {
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.quicksand-bold {
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 
 * {
   box-sizing: border-box;
