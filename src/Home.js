@@ -92,7 +92,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div class="flex justify-end w-full mt-24 mr-48">
-                    <img src="assets/portfolio-bild.jpg" class="w-80 h-80 object-cover rounded-full" alt="Profile Picture"></img>
+                    <img src="assets/portfolio-bild.JPG" class="w-80 h-80 object-cover rounded-full" alt="Profile Picture"></img>
                     </div>
         </div>
                 </div>
