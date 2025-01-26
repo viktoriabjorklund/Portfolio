@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import Layout from './Layout';
 import PlantDetails from './PlantDetails';
 import FurhatDetails from './FurhatDetails';
+import DrinkDetails from './DrinkDetails';
 
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="plant-details" element={<PlantDetails />} />
           <Route path="pitch-imperfect-details" element={<FurhatDetails />} />
+          <Route path="drink-generator-details" element={<DrinkDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>

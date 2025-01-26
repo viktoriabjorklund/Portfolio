@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useNavigateProjects } from './utils';
 import { handleContactClick } from './utils';
+import Header from './Header';
 
 
 const PlantDetails = () => {
@@ -9,38 +10,7 @@ const PlantDetails = () => {
     const handleProjectsClick = useNavigateProjects();
     return (
         <div>
-            <div className="bg-[#F1F1F1] fixed top-0 left-0 w-full">
-            <div className="quicksand-semi text-[#8DA9B2] flex justify-between items-center py-4 px-8">
-                <div
-                    className="text-lg sm:text-xl md:text-2xl lg:text-2xl ml-1 cursor-pointer"
-                    onClick={() => navigate('/')}
-                >
-                    Viktoria Björklund
-                </div>
-
-                <div className="quicksand-semi text-[#8DA9B2] flex space-x-10 mr-4">
-                    <div
-                        className="text-lg sm:text-xl md:text-2xl lg:text-2xl cursor-pointer"
-                        onClick={handleProjectsClick}
-                    >
-                        Projects
-                    </div>
-                    <div
-                        className="text-lg sm:text-xl md:text-2xl lg:text-2xl cursor-pointer"
-                    >
-                         <a href="/Viktoria Björklund Resume.pdf" target="_blank" rel="noopener noreferrer">
-                                CV
-                            </a>
-                    </div>
-                    <div
-                        className="text-lg sm:text-xl md:text-2xl lg:text-2xl cursor-pointer"
-                        onClick={handleContactClick}
-                    >
-                        Contact
-                    </div>
-                </div>
-            </div>
-            </div>
+            <Header/>
 
             <div class="absolute bottom-0 left-0 w-full -z-10">
                 <svg width="100%" height="80%" viewBox="0 0 1920 745" fill="none" xmlns="http://www.w3.org/2000/svg">
