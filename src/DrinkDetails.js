@@ -42,7 +42,7 @@ const DrinkDetails = () => {
                         drink to make. Although the app is functional, it still lacks some features and design 
                         refinements, which I am currently working on alongside my studies.
                         <div class=" mt-4 mb-4">
-                            Link to the deployed webpage: LINK
+                            Link to the deployed webpage: TBA
                         </div>
                         
                          <div className="quicksand-semi text-xl mt-8 mb-4">

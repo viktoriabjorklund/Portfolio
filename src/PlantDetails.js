@@ -51,6 +51,11 @@ const PlantDetails = () => {
                         <div class="mt-4">
                          This project was made by me, O. Martin, D Segal, K. Biro and V. Oetterli and took place 8/2025 - 10/2025.
                          </div>
+                         <div class="mt-4">
+                         <a href="/Viktoria Björklund Resume.pdf" target="_blank" rel="noopener noreferrer" class="ml-0 text-blue-600 underline hover:text-blue-800">
+                            Link to our workbook 
+                            </a>
+                         </div>
                          <div className="quicksand-semi text-xl mt-8 mb-4">
                             Keywords
                         </div>

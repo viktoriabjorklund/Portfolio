@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Home from './Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App_test from './skräp';
 import reportWebVitals from './reportWebVitals';
 import Layout from './Layout';
 import PlantDetails from './PlantDetails';
